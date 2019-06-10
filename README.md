@@ -10,7 +10,7 @@ pip install tensorflow-gpu==2.0.0-beta0
 
 ## To Do
 - [x] implement backbone model
-- [] update [light-head-rcnn-tf](https://github.com/Stick-To/light-head-rcnn-tensorflow) to tensorflow 2.0
-- [] integrate detection head
-- [] Implement data input pipeline using tf.data.Dataset
-- [] Train on voc, coco
+- [ ] update [light-head-rcnn-tf](https://github.com/Stick-To/light-head-rcnn-tensorflow) to tensorflow 2.0
+- [ ] integrate detection head
+- [ ] Implement data input pipeline using tf.data.Dataset
+- [ ] Train on voc, coco
