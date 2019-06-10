@@ -293,6 +293,41 @@ class RPN(Model):
 
         return rpn, rpn_conf, rpn_pbbox
 nnel = 116),
+
+
+
+
+class SAM(Model):
+    """spatial attention module"""
+    def __init__(self):
+        super(SAM, self).__init__()
+        self.point =  Conv2D(CEM_FILTER, 1, strides=1,
+                                padding="VALID", use_bias=False)
+        self.bn = BatchNormalization()
+
+    @tf.function
+    def call(self, inputs, training=False):
+        """[RPN, CEM] """
+        x = self.point(inputs[0])
+        x = self.bn(x)
+        x = tf.keras.activations.softmax(x, axis=-1)
+        x = tf.math.multiply(x, inputs[1])
+        return x
+
+
+
+import numpy as np
+
+if __name__ == "__main__":
+
+
+
+    s = (10, 320, 320, 12)
+    nx = np.random.rand(*s).astype(np.float32)
+
+    custom_layers = [
+        ShufflenetUnit1(out_channel = s[-1]),
+        ShufflenetUnit2(in_channel = 24, out_channel = 116),
         ShufflenetStage(in_channel = 24, out_channel = 116, num_blocks = 5)
     ]
 
@@ -334,3 +369,4 @@ nnel = 116),
     sam.summary()
     cem.summary()
     rpn.summary()
+
