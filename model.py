@@ -7,7 +7,7 @@ import tensorflow as tf
 import numpy as np
 
 class ThunderNet_bb(Model):
-    """ thundernet without head"""
+    """ thundernet without roi part"""
     def __init__(self):
         super(ThunderNet_bb, self).__init__(name="ThunderNet_bb")
         self.bb=ShuffleNetv2(CEM_FILTER)
