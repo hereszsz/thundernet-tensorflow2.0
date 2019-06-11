@@ -40,6 +40,9 @@ if __name__ == "__main__":
     nx = np.random.rand(*shape).astype(np.float32)
 
     g = ThunderNet_bb()
+    g.build((None, 320,320,3))
+    g.summary()
+
     t = keras.Input(shape=nx.shape[1:], batch_size=nx.shape[0])
     sam_result, rpn_result, rpn_cls_score, rpn_cls_pred = g(nx, training=False)
     #sam_result = g(t, training=False)
