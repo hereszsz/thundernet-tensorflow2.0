@@ -292,7 +292,6 @@ class RPN(Model):
 
 
         return rpn, rpn_conf, rpn_pbbox
-nnel = 116),
 
 
 
