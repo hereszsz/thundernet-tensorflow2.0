@@ -4,7 +4,7 @@ under construction
 this project is constructed for myself and anyone else who need it to learn tensorflow2.0 and not intend to reproducing the original result of the paper. API inside tf.keras.Backend is prefered than tf.
 
 ## install kerasflow:
-pip install tensorflow-gpu==2.0.0-beta0
+pip install tensorflow-gpu==2.0.0-beta1
 
 
 
