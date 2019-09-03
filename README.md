@@ -1,5 +1,5 @@
 ## purpose
-under construction
+please refer to https://github.com/mohhao/TF-Keras-ThunderNet
 
 this project is constructed for myself and anyone else who need it to learn tensorflow2.0 and not intend to reproducing the original result of the paper. API inside tf.keras.Backend is prefered than tf.
 
